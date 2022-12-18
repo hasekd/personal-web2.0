@@ -4,8 +4,8 @@ const color = {
   primary: {
     white: "#ffffff",
     black: "#000000",
-    blue: "#0c8599",
-    gray: "#f9f9f9",
+    blue: "#0b7285",
+    lightBlue: "#3bc9db",
   },
   secondary: {
     danger: "#dc3545",
