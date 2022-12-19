@@ -1,8 +1,13 @@
 import React from "react";
-import Layout from "../components/Layout/Layout";
+import Header from "../components/Header/Header";
+import Navbar from "../components/Header/Navbar";
 
 const HomePage = () => {
-  return <Layout></Layout>;
+  return (
+    <>
+      <Header />
+    </>
+  );
 };
 
 export default HomePage;
