@@ -1,7 +1,13 @@
 import React from "react";
+import Layout from "../components/Layout/Layout";
+import Projects from "../components/MyProjects/Projects";
 
 const PortfolioPage = () => {
-  return <div>PortfolioPage</div>;
+  return (
+    <Layout>
+      <Projects />
+    </Layout>
+  );
 };
 
 export default PortfolioPage;
