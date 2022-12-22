@@ -1,13 +1,32 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from "react";
 import { send } from "emailjs-com";
-import {theme} from "../../styles/theme"
+import {
+  Flex,
+  FormControl,
+  useToast,
+  Input,
+  FormLabel,
+  Textarea,
+  Button,
+  Text,
+  Box,
+} from "@chakra-ui/react";
+import { theme } from "../../styles/theme";
+
+type Inputs = {
+  name: string;
+  email: string;
+  message: string;
+};
 
 const ContactForm = () => {
   const [toSend, setToSend] = useState({
-    fullName: "",
+    name: "",
     email: "",
     message: "",
   });
+
+  const toast = useToast();
 
   const [nameInput, setNameInput] = useState("");
   const [emailInput, setEmailInput] = useState("");
@@ -16,10 +35,10 @@ const ContactForm = () => {
   const emailSend = async (formData: any): Promise<any> => {
     try {
       const emailRes = await send(
-        process.env.REACT_APP_SERVICE_ID as string,
-        process.env.REACT_APP_TEMPLATE_ID as string,
+        process.env.NEXT_PUBLIC_SERVICE_ID as string,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID as string,
         formData,
-        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       );
 
       if (emailRes.status === 200) {
@@ -32,7 +51,7 @@ const ContactForm = () => {
 
   useEffect(() => {
     setToSend({
-      fullName: nameInput,
+      name: nameInput,
       email: emailInput,
       message: messageInput,
     });
@@ -48,13 +67,101 @@ const ContactForm = () => {
     setMessageInput("");
 
     if (result.isSuccess) {
-      return toast.success("Successfully submited!");
+      return toast({
+        title: "Successfully submited!",
+        description: "Received your message, thank you :)",
+        status: "success",
+        duration: 4000,
+        isClosable: true,
+      });
     }
-    return toast.error("This didn't work.");
+    return toast({
+      title: "This didn't work.",
+      description: "Something went wrong.",
+      status: "error",
+      duration: 4000,
+      isClosable: true,
+    });
   };
-  return (
-    
-  )
-}
 
-export default ContactForm
+  return (
+    <>
+      <Box fontSize={"3.3rem"} textAlign={"center"} mt={"4rem"}>
+        <Text>Thanks for taking the time to reach out.</Text>
+        <Text>How can I help you?</Text>
+      </Box>
+      <form onSubmit={submitHandler}>
+        <FormControl w={"70rem"} m={"5rem auto"}>
+          <Flex flexDir={"column"}>
+            <Flex gap={"2rem"} mb={"2rem"}>
+              <Flex flexDir={"column"} w={"100%"}>
+                <FormLabel fontSize={"2rem"} mb={"1rem"} textColor={"#666666"}>
+                  Name
+                </FormLabel>
+                <Input
+                  size={"lg"}
+                  h={"4.8rem"}
+                  fontSize={"1.5rem"}
+                  borderColor={"black"}
+                  _hover={{ borderColor: theme.color.primary.blue }}
+                  onChange={(e: any) => setNameInput(e.target.value)}
+                  value={nameInput}
+                  required
+                />
+              </Flex>
+              <Flex flexDir={"column"} w={"100%"}>
+                <FormLabel fontSize={"2rem"} mb={"1rem"} textColor={"#666666"}>
+                  E-mail
+                </FormLabel>
+                <Input
+                  type={"email"}
+                  size={"lg"}
+                  h={"4.8rem"}
+                  fontSize={"1.5rem"}
+                  borderColor={"black"}
+                  _hover={{ borderColor: theme.color.primary.blue }}
+                  onChange={(e: any) => setEmailInput(e.target.value)}
+                  value={emailInput}
+                  required
+                />
+              </Flex>
+            </Flex>
+            <FormLabel fontSize={"2rem"} mb={"1rem"} textColor={"#666666"}>
+              Message
+            </FormLabel>
+            <Textarea
+              minHeight="23rem"
+              fontSize={"1.5rem"}
+              borderColor={"black"}
+              _hover={{ borderColor: theme.color.primary.blue }}
+              onChange={(e: any) => setMessageInput(e.target.value)}
+              value={messageInput}
+              required
+            />
+            <Button
+              mt="3.5rem"
+              p={"2.3rem 5.7rem"}
+              fontSize={"1.7rem"}
+              bgColor={"transparent"}
+              borderRadius={"5rem"}
+              fontWeight={500}
+              alignSelf={"center"}
+              border={`2px solid ${theme.color.primary.blue}`}
+              textColor={theme.color.primary.blue}
+              _hover={{
+                bgColor: theme.color.hover.blue,
+                textColor: theme.color.text.white,
+              }}
+              transition={"all 0.4s ease-out"}
+              type="submit"
+            >
+              Submit
+            </Button>
+          </Flex>
+        </FormControl>
+      </form>
+    </>
+  );
+};
+
+export default ContactForm;

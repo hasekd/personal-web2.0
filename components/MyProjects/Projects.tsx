@@ -4,14 +4,12 @@ import ProjectCard from "./ProjectCard";
 
 const Projects = () => {
   return (
-    <Flex flexDir={"column"} align={"center"}>
+    <Flex flexDir={"column"} align={"center"} m={"5rem 0"}>
       <Box textAlign={"center"}>
-        <Text fontSize={"3.5rem"} mb={"1rem"} fontWeight={700}>
+        <Text fontSize={"3.6rem"} mb={"1rem"} fontWeight={700}>
           My Work
         </Text>
-        <Text fontSize={"1.7rem"}>
-          Here are a few projects I have worked on.
-        </Text>
+        <Text fontSize={"2rem"}>Here are a few projects I have worked on.</Text>
       </Box>
 
       <Grid gridTemplateColumns={"1fr 1fr"} gap={"2rem"} mt={"5rem"}>

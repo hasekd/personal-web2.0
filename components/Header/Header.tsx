@@ -1,7 +1,7 @@
 import { Flex, Heading, Text } from "@chakra-ui/react";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
+import Footer from "../Footer/Footer";
 import Navbar from "./Navbar";
 
 const Header = () => {
@@ -18,9 +18,11 @@ const Header = () => {
         <Image
           src={require("../../img/programming-illustration.png")}
           alt="programming-illustration"
-          width={750}
+          style={{ width: 750 }}
+          priority={true}
         />
       </Flex>
+      <Footer />
     </>
   );
 };
