@@ -8,17 +8,23 @@ import SkillCard from "../components/SkillCard/SkillCard";
 const AboutPage = () => {
   return (
     <Layout>
-      <Box>
-        <Box textAlign={"center"} m={"5rem 0"}>
-          <Text fontWeight={700} fontSize={"3.6rem"}>
+      <Box p={"0 2rem 4rem 2rem"}>
+        <Box textAlign={"center"} m={"2rem 0"}>
+          <Text fontWeight={700} fontSize={{ base: "3rem", md: "3.6rem" }}>
             Hey, I&apos;m Daniel. Nice to meet you.
           </Text>
-          <Text fontSize={"2rem"} mt={"1.5rem"}>
+          <Text fontSize={{ base: "1.7rem", md: "2rem" }} mt={"1.5rem"}>
             Frontend developer that loves to code and design things from
             scratch. From Czech Republic.
           </Text>
         </Box>
-        <Flex justify={"space-around"} align={"center"} minH={"80vh"}>
+        <Flex
+          justify={"space-around"}
+          gap={"3rem"}
+          align={"center"}
+          flexDir={{ base: "column", md: "unset" }}
+          pt={"3rem"}
+        >
           <SkillCard
             heading={"Frontend Developer"}
             text={"I like to code and enjoy bringing ideas to life."}

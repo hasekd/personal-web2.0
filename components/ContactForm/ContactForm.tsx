@@ -86,14 +86,22 @@ const ContactForm = () => {
 
   return (
     <>
-      <Box fontSize={"3.3rem"} textAlign={"center"} mt={"4rem"}>
+      <Box
+        fontSize={{ base: "2.5rem", md: "3.3rem" }}
+        textAlign={"center"}
+        mt={"4rem"}
+      >
         <Text>Thanks for taking the time to reach out.</Text>
         <Text>How can I help you?</Text>
       </Box>
       <form onSubmit={submitHandler}>
-        <FormControl w={"70rem"} m={"5rem auto"}>
+        <FormControl maxW={"70rem"} m={"5rem auto"} p={"0 2rem"}>
           <Flex flexDir={"column"}>
-            <Flex gap={"2rem"} mb={"2rem"}>
+            <Flex
+              gap={"2rem"}
+              mb={"2rem"}
+              flexDir={{ base: "column", sm: "unset" }}
+            >
               <Flex flexDir={"column"} w={"100%"}>
                 <FormLabel fontSize={"2rem"} mb={"1rem"} textColor={"#666666"}>
                   Name
@@ -140,7 +148,7 @@ const ContactForm = () => {
             />
             <Button
               mt="3.5rem"
-              p={"2.3rem 5.7rem"}
+              p={{ base: "2.1rem 4rem", sm: "2.3rem 5.7rem" }}
               fontSize={"1.7rem"}
               bgColor={"transparent"}
               borderRadius={"5rem"}

@@ -12,9 +12,9 @@ const SocialIcon: LinkProps = {
   justifyContent: "center",
   alignItems: "center",
   borderRadius: "50%",
-  w: "5.2rem",
-  h: "5.2rem",
-  fontSize: "2.3rem",
+  w: { base: "4.3rem", sm: "5.2rem" },
+  h: { base: "4.3rem", sm: "5.2rem" },
+  fontSize: { base: "2rem", sm: "2.3rem" },
   _hover: {
     bgColor: theme.color.primary.white,
     color: theme.color.primary.blue,
@@ -30,14 +30,16 @@ const Footer = () => {
       gap={"3rem"}
       textColor={theme.color.text.white}
       bgColor={theme.color.primary.blue}
-      p={"4rem 0"}
+      p={"4rem 2rem"}
     >
       <Image
-        src={require("../../img/logo-2.png")}
+        src={require("../../public/img/logo-2.webp")}
         alt={"sub-logo"}
         style={{ width: 70 }}
       />
-      <Text fontSize={"2.5rem"}>Still learning one day at a time.</Text>
+      <Text fontSize={{ base: "2rem", sm: "2.5rem" }} textAlign={"center"}>
+        Still learning one day at a time.
+      </Text>
       <Flex gap={"2rem"} align={"center"}>
         <Link
           {...SocialIcon}
@@ -52,12 +54,12 @@ const Footer = () => {
         </Link>
 
         <Button
-          w={"5.2rem"}
-          h={"5.2rem"}
+          w={{ base: "4.3rem", sm: "5.2rem" }}
+          h={{ base: "4.3rem", sm: "5.2rem" }}
           borderRadius={"50%"}
           border={`2px solid ${theme.color.primary.white}`}
           bgColor={"transparent"}
-          fontSize={"2.1rem"}
+          fontSize={{ base: "2rem", sm: "2.3rem" }}
           _hover={{
             bgColor: theme.color.primary.white,
             color: theme.color.primary.blue,
@@ -68,7 +70,11 @@ const Footer = () => {
           <HiOutlineMail />
         </Button>
       </Flex>
-      <Text fontSize={"1.7rem"} letterSpacing={"0.5px"}>
+      <Text
+        fontSize={{ base: "1.5rem", sm: "1.7rem" }}
+        letterSpacing={"0.5px"}
+        textAlign={"center"}
+      >
         Created by me &copy; {new Date().getFullYear()}
       </Text>
     </Flex>
