@@ -57,7 +57,7 @@ const Navbar = () => {
       >
         <Link href={"/"}>
           <Image
-            src={require("../../public/img/logo.avif")}
+            src={require("../../public/img/logo.png")}
             alt={"main-logo"}
             style={{ width: 90 }}
             priority={true}

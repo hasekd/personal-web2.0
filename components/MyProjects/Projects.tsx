@@ -24,22 +24,22 @@ const Projects = () => {
         mt={"5rem"}
       >
         <ProjectCard
-          image={require("../../public/img/tesla-logo.jpeg")}
+          image={require("../../public/img/tesla-logo.webp")}
           text="jsdfkjsdfkjshdfajsndkasdkaskdaksmdkasmdkamsdamskdmaksdmkasmdkm"
           link="https://en.wikipedia.org/wiki/Next.js"
         />
         <ProjectCard
-          image={require("../../public/img/tesla-logo.jpeg")}
+          image={require("../../public/img/tesla-logo.webp")}
           text="jsdfkjsdfkjshdfajsndkasdkaskdaksmdkasmdkamsdamskdmaksdmkasmdkm"
           link="something.com"
         />
         <ProjectCard
-          image={require("../../public/img/tesla-logo.jpeg")}
+          image={require("../../public/img/tesla-logo.webp")}
           text="jsdfkjsdfkjshdfajsndkasdkaskdaksmdkasmdkamsdamskdmaksdmkasmdkm"
           link="something.com"
         />
         <ProjectCard
-          image={require("../../public/img/tesla-logo.jpeg")}
+          image={require("../../public/img/tesla-logo.webp")}
           text="jsdfkjsdfkjshdfajsndkasdkaskdaksmdkasmdkamsdamskdmaksdmkasmdkm"
           link="something.com"
         />
