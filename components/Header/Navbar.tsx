@@ -1,9 +1,10 @@
 import { Flex, Text, TextProps } from "@chakra-ui/react";
 import { theme } from "../../styles/theme";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import MobileNavbar from "./MobileNavbar";
 
 const LinkStyle: TextProps = {
   cursor: "pointer",
@@ -29,20 +30,37 @@ const LinkStyle: TextProps = {
   },
 };
 
+function useWindowSize() {
+  const [size, setSize] = useState([0, 0]);
+  useLayoutEffect(() => {
+    function updateSize() {
+      setSize([window.innerWidth, window.innerHeight]);
+    }
+    window.addEventListener("resize", updateSize);
+    updateSize();
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
+  return size;
+}
+
 const Navbar = () => {
+  const [width, height] = useWindowSize();
+
   return (
     <motion.div>
       <Flex
         align={"center"}
         justify={"space-between"}
-        p={"2rem 5rem"}
+        p={"2rem"}
+        display={["none", "none", "flex", "flex"]}
         fontWeight={700}
       >
         <Link href={"/"}>
           <Image
-            src={require("../../img/logo.png")}
+            src={require("../../public/img/logo.avif")}
             alt={"main-logo"}
-            style={{ width: 100 }}
+            style={{ width: 90 }}
+            priority={true}
           />
         </Link>
         <Flex gap={"3rem"} align={"center"}>
@@ -71,6 +89,7 @@ const Navbar = () => {
           </Link>
         </Flex>
       </Flex>
+      {width < 767 ? <MobileNavbar /> : ""}
     </motion.div>
   );
 };

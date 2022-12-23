@@ -8,15 +8,20 @@ const Header = () => {
   return (
     <>
       <Navbar />
-      <Flex flexDir={"column"} align={"center"} pt={"5rem"}>
-        <Heading fontSize={"5.5rem"} textAlign={"center"}>
+      <Flex flexDir={"column"} align={"center"} p={"5rem 2rem 0 2rem"}>
+        <Heading fontSize={{ base: "4rem", md: "5.5rem" }} textAlign={"center"}>
           Frontend Developer & Designer
         </Heading>
-        <Text fontSize={"2.3rem"} mt={"2rem"} mb={"5rem"} textAlign={"center"}>
+        <Text
+          fontSize={{ base: "1.9rem", md: "2.3rem" }}
+          mt={"2rem"}
+          mb={"5rem"}
+          textAlign={"center"}
+        >
           I code beautiful things and I love what I do.
         </Text>
         <Image
-          src={require("../../img/programming-illustration.png")}
+          src={require("../../public/img/programming-illustration.webp")}
           alt="programming-illustration"
           style={{ width: 750 }}
           priority={true}

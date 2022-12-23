@@ -8,7 +8,7 @@ const ProjectCard = ({ text, link, image }: any) => {
 
   return (
     <Flex
-      w={"37rem"}
+      maxW={{ base: "28rem", md: "37rem" }}
       borderRadius={"1.5rem"}
       overflow="hidden"
       onMouseEnter={() => setAnimation(true)}
@@ -30,7 +30,12 @@ const ProjectCard = ({ text, link, image }: any) => {
         >
           <Text
             mb={"1.5rem"}
-            fontSize={"1.6rem"}
+            fontSize={{
+              base: "1.1rem",
+              sm: "0.95rem",
+              md: "1.5rem",
+              lg: "1.7rem",
+            }}
             wordBreak={"break-word"}
             pos={"relative"}
             top={"30%"}
@@ -40,12 +45,12 @@ const ProjectCard = ({ text, link, image }: any) => {
 
           <Link
             href={link}
-            lineHeight={"4.2rem"}
+            lineHeight={{ base: "3rem", md: "4.2rem" }}
             display={"inline-block"}
             p={"0 2rem"}
             textAlign={"center"}
             border={`2px solid ${theme.color.primary.blue}`}
-            fontSize={"1.6rem"}
+            fontSize={{ base: "1.1rem", md: "1.6rem" }}
             fontWeight={600}
             borderRadius={"3rem"}
             textDecoration={"none"}

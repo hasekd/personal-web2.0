@@ -4,6 +4,7 @@ import Navbar from "../Header/Navbar";
 const Layout = ({ children }: any) => {
   return (
     <>
+      {/* <DocumentMetadata /> */}
       <Navbar />
       {children}
       <Footer />
