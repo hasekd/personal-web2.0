@@ -12,6 +12,11 @@ const Metadata = ({ title, description }: MetadataProps) => {
     <Head>
       <title>{title}</title>
       <meta name="description" content={description} />
+      <link
+        rel="shortcut icon"
+        href="/favicon/favicon.ico"
+        type="image/x-icon"
+      />
     </Head>
   );
 };
