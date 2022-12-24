@@ -1,4 +1,4 @@
-import { Flex, Text, TextProps } from "@chakra-ui/react";
+import { Container, Flex, Text, TextProps } from "@chakra-ui/react";
 import { theme } from "../../styles/theme";
 import Link from "next/link";
 import React, { useEffect, useLayoutEffect, useState } from "react";
@@ -52,6 +52,8 @@ const Navbar = () => {
         align={"center"}
         justify={"space-between"}
         p={"2rem"}
+        maxW={"130rem"}
+        m={"0 auto"}
         display={["none", "none", "flex", "flex"]}
         fontWeight={700}
       >

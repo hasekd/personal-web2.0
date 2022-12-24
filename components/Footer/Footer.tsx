@@ -30,7 +30,9 @@ const Footer = () => {
       gap={"3rem"}
       textColor={theme.color.text.white}
       bgColor={theme.color.primary.blue}
-      p={"4rem 2rem"}
+      p={"4rem 0"}
+      pos={"relative"}
+      bottom={{ base: "0", "2xl": "-42rem" }}
     >
       <Image
         src={require("../../public/img/logo-2.webp")}

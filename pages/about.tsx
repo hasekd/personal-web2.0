@@ -19,8 +19,8 @@ const AboutPage = () => {
           </Text>
         </Box>
         <Flex
-          justify={"space-around"}
-          gap={"3rem"}
+          justify={{ base: "space-around", "2xl": "center" }}
+          gap={{ base: "3rem", "2xl": "30rem" }}
           align={"center"}
           flexDir={{ base: "column", md: "unset" }}
           pt={"3rem"}

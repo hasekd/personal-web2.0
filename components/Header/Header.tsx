@@ -8,7 +8,12 @@ const Header = () => {
   return (
     <>
       <Navbar />
-      <Flex flexDir={"column"} align={"center"} p={"5rem 2rem 0 2rem"}>
+      <Flex
+        flexDir={"column"}
+        align={"center"}
+        justify={"center"}
+        p={"5rem 2rem 0 2rem"}
+      >
         <Heading fontSize={{ base: "4rem", md: "5.5rem" }} textAlign={"center"}>
           Frontend Developer & Designer
         </Heading>
