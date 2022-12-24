@@ -19,27 +19,27 @@ const Projects = () => {
       </Box>
 
       <Grid
-        gridTemplateColumns={{ base: "1fr", sm: "1fr 1fr" }}
+        gridTemplateColumns={{ base: "1fr", md: "1fr 1fr" }}
         gap={"2rem"}
         mt={"5rem"}
       >
         <ProjectCard
-          image={require("../../public/img/tesla-logo.webp")}
+          image={"url('/img/tesla-logo.webp')"}
           text="jsdfkjsdfkjshdfajsndkasdkaskdaksmdkasmdkamsdamskdmaksdmkasmdkm"
           link="https://en.wikipedia.org/wiki/Next.js"
         />
         <ProjectCard
-          image={require("../../public/img/tesla-logo.webp")}
+          image={"url('/img/tesla-logo.webp')"}
           text="jsdfkjsdfkjshdfajsndkasdkaskdaksmdkasmdkamsdamskdmaksdmkasmdkm"
           link="something.com"
         />
         <ProjectCard
-          image={require("../../public/img/tesla-logo.webp")}
+          image={"url('/img/tesla-logo.webp')"}
           text="jsdfkjsdfkjshdfajsndkasdkaskdaksmdkasmdkamsdamskdmaksdmkasmdkm"
           link="something.com"
         />
         <ProjectCard
-          image={require("../../public/img/tesla-logo.webp")}
+          image={"url('/img/tesla-logo.webp')"}
           text="jsdfkjsdfkjshdfajsndkasdkaskdaksmdkasmdkamsdamskdmaksdmkasmdkm"
           link="something.com"
         />
