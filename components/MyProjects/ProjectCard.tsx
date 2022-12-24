@@ -15,7 +15,7 @@ const ProjectCard = ({ text, link, image }: any) => {
       onMouseLeave={() => setAnimation(false)}
     >
       <Box pos={"relative"} textColor={"white"} textAlign={"center"}>
-        <Image src={image} alt="project-image" />
+        <Image src={image} alt="project-image" priority={true} />
         <Box
           w={"100%"}
           h={"100%"}
