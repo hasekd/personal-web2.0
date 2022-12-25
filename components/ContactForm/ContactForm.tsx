@@ -35,10 +35,10 @@ const ContactForm = () => {
   const emailSend = async (formData: any): Promise<any> => {
     try {
       const emailRes = await send(
-        process.env.NEXT_PUBLIC_SERVICE_ID as string,
-        process.env.NEXT_PUBLIC_TEMPLATE_ID as string,
+        "service_4v1yiy9",
+        "template_jb3ir6b",
         formData,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+        "sUUqWohOO-xmcfnC2"
       );
 
       if (emailRes.status === 200) {
@@ -95,7 +95,7 @@ const ContactForm = () => {
         <Text>Thanks for taking the time to reach out.</Text>
         <Text>How can I help you?</Text>
       </Box>
-      <form onSubmit={submitHandler} method="POST" data-netlify="true">
+      <form onSubmit={submitHandler}>
         <FormControl maxW={"70rem"} m={"5rem auto"} p={"0 2rem"}>
           <Flex flexDir={"column"}>
             <Flex
