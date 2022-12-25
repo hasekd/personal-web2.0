@@ -77,7 +77,7 @@ const ContactForm = () => {
     }
     return toast({
       title: "This didn't work.",
-      description: "Something went wrong.",
+      description: "Something went wrong. :(",
       status: "error",
       duration: 4000,
       isClosable: true,
