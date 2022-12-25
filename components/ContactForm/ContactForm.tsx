@@ -95,7 +95,7 @@ const ContactForm = () => {
         <Text>Thanks for taking the time to reach out.</Text>
         <Text>How can I help you?</Text>
       </Box>
-      <form onSubmit={submitHandler}>
+      <form onSubmit={submitHandler} method="POST" data-netlify="true">
         <FormControl maxW={"70rem"} m={"5rem auto"} p={"0 2rem"}>
           <Flex flexDir={"column"}>
             <Flex
