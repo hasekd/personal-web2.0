@@ -45,6 +45,7 @@ const ContactForm = () => {
         return { emailRes, isSuccess: true };
       }
     } catch (err) {
+      console.log(err);
       return { err, isSuccess: false };
     }
   };
