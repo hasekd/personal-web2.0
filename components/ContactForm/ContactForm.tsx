@@ -35,17 +35,16 @@ const ContactForm = () => {
   const emailSend = async (formData: any): Promise<any> => {
     try {
       const emailRes = await send(
-        "service_4v1yiy9",
-        "template_jb3ir6b",
+        process.env.NEXT_PUBLIC_SERVICE_ID as string,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID as string,
         formData,
-        "sUUqWohOO-xmcfnC2"
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       );
 
       if (emailRes.status === 200) {
         return { emailRes, isSuccess: true };
       }
     } catch (err) {
-      console.log(err);
       return { err, isSuccess: false };
     }
   };
