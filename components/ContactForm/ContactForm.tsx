@@ -87,9 +87,10 @@ const ContactForm = () => {
   return (
     <>
       <Box
-        fontSize={{ base: "2.5rem", md: "3.3rem" }}
+        fontSize={{ base: "2.3rem", sm: "3rem", md: "3.2rem" }}
         textAlign={"center"}
         mt={"4rem"}
+        p={"0 2rem"}
       >
         <Text>Thanks for taking the time to reach out.</Text>
         <Text>How can I help you?</Text>

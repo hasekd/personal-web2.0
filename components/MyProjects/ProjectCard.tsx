@@ -33,9 +33,9 @@ const ProjectCard = ({ text, link, image }: any) => {
         <Text
           mb={"1.5rem"}
           fontSize={{
-            base: "1.3rem",
-            md: "1.5rem",
-            lg: "1.7rem",
+            base: "1.6rem",
+            md: "1.8rem",
+            lg: "1.9rem",
           }}
           wordBreak={"break-word"}
           pos={"relative"}

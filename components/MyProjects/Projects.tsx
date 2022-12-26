@@ -24,22 +24,22 @@ const Projects = () => {
         mt={"5rem"}
       >
         <ProjectCard
-          image={"url('/img/tesla-logo.webp')"}
-          text="jsdfkjsdfkjshdfajsndkasdkaskdaksmdkasmdkamsdamskdmaksdmkasmdkm"
+          image={"url('/img/coming-soon.jpeg')"}
+          text="Handmade dog beds with unique design"
           link="https://en.wikipedia.org/wiki/Next.js"
         />
         <ProjectCard
-          image={"url('/img/tesla-logo.webp')"}
+          image={"url('/img/coming-soon.jpeg')"}
           text="jsdfkjsdfkjshdfajsndkasdkaskdaksmdkasmdkamsdamskdmaksdmkasmdkm"
           link="something.com"
         />
         <ProjectCard
-          image={"url('/img/tesla-logo.webp')"}
+          image={"url('/img/coming-soon.jpeg')"}
           text="jsdfkjsdfkjshdfajsndkasdkaskdaksmdkasmdkamsdamskdmaksdmkasmdkm"
           link="something.com"
         />
         <ProjectCard
-          image={"url('/img/tesla-logo.webp')"}
+          image={"url('/img/coming-soon.jpeg')"}
           text="jsdfkjsdfkjshdfajsndkasdkaskdaksmdkasmdkamsdamskdmaksdmkasmdkm"
           link="something.com"
         />
