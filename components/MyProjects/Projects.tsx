@@ -24,7 +24,7 @@ const Projects = () => {
         mt={"5rem"}
       >
         <ProjectCard
-          image={"url('/img/coming-soon.jpeg')"}
+          image={"url('/img/Archieshop')"}
           text="Handmade dog beds with unique design"
           link="https://en.wikipedia.org/wiki/Next.js"
         />
