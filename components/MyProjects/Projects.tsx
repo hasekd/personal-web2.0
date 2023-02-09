@@ -24,24 +24,24 @@ const Projects = () => {
         mt={"5rem"}
       >
         <ProjectCard
-          image={"url('/img/Archieshop')"}
+          image={"/img/Archieshop.png"}
           text="Handmade dog beds with unique design"
-          link="https://en.wikipedia.org/wiki/Next.js"
+          link="https://github.com/hasekd"
         />
         <ProjectCard
-          image={"url('/img/coming-soon.jpeg')"}
-          text="jsdfkjsdfkjshdfajsndkasdkaskdaksmdkasmdkamsdamskdmaksdmkasmdkm"
-          link="something.com"
+          image={"/img/coming-soon.jpeg"}
+          text="jsdfkjsdfkjshdfajsndkasdkaskdaksmdkasm"
+          link="https://github.com/hasekd"
         />
         <ProjectCard
-          image={"url('/img/coming-soon.jpeg')"}
-          text="jsdfkjsdfkjshdfajsndkasdkaskdaksmdkasmdkamsdamskdmaksdmkasmdkm"
-          link="something.com"
+          image={"/img/coming-soon.jpeg"}
+          text="jsdfkjsdfkjshdfajsndkasdkaskdaksmdkasmdkam"
+          link="https://github.com/hasekd"
         />
         <ProjectCard
-          image={"url('/img/coming-soon.jpeg')"}
-          text="jsdfkjsdfkjshdfajsndkasdkaskdaksmdkasmdkamsdamskdmaksdmkasmdkm"
-          link="something.com"
+          image={"/img/coming-soon.jpeg"}
+          text="jsdfkjsdfkjshdfajsndkasdkaskdaskdmaksdmkasmdkm"
+          link="https://github.com/hasekd"
         />
       </Grid>
     </Flex>

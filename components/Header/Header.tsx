@@ -28,6 +28,8 @@ const Header = () => {
         <Image
           src={require("../../public/img/programming-illustration.webp")}
           alt="programming-illustration"
+          width={500}
+          height={0}
           style={{ width: 750 }}
           priority={true}
         />

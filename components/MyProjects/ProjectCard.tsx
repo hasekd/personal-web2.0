@@ -1,4 +1,4 @@
-import { Box, Flex, Text, Link } from "@chakra-ui/react";
+import { Box, Flex, Text, Link, useMediaQuery } from "@chakra-ui/react";
 import Image from "next/image";
 import React, { useState } from "react";
 import { theme } from "../../styles/theme";
@@ -6,25 +6,36 @@ import { theme } from "../../styles/theme";
 const ProjectCard = ({ text, link, image }: any) => {
   const [animation, setAnimation] = useState(false);
 
+  const [isTabletOrSmaller] = useMediaQuery("(max-width: 600px)");
+
   return (
     <Box
-      bgImage={image}
-      maxW={{ base: "30rem", md: "40rem" }}
-      minH={{ base: "25rem", md: "30rem" }}
-      bgPosition={"center"}
-      bgSize={"cover"}
-      borderRadius={"1.5rem"}
-      overflow="hidden"
+      pos={"relative"}
       textColor={theme.color.text.white}
+      overflow={"hidden"}
+      borderRadius={"1.5rem"}
       textAlign={"center"}
       onMouseEnter={() => setAnimation(true)}
       onMouseLeave={() => setAnimation(false)}
     >
+      <Image
+        src={image}
+        alt={text}
+        width={400}
+        height={0}
+        style={{
+          width: "43rem",
+          height: `${isTabletOrSmaller ? "20rem" : "30rem"}`,
+          objectFit: "cover",
+        }}
+      />
       <Flex
         flexDir={"column"}
         align={"center"}
         w={"100%"}
         h={"100%"}
+        pos={"absolute"}
+        top={0}
         opacity={animation ? "" : 0}
         p={"0 2rem"}
         bgColor={"#000"}
@@ -39,7 +50,7 @@ const ProjectCard = ({ text, link, image }: any) => {
           }}
           wordBreak={"break-word"}
           pos={"relative"}
-          top={"30%"}
+          top={{ base: "30%", md: "33%" }}
         >
           {text}
         </Text>
@@ -56,7 +67,7 @@ const ProjectCard = ({ text, link, image }: any) => {
           borderRadius={"3rem"}
           textDecoration={"none"}
           pos={"relative"}
-          top={"33%"}
+          top={{ base: "31%", md: "36%" }}
           _hover={{ bgColor: theme.color.primary.blue }}
           target="_blank"
           transition={"all 0.4s ease-out"}

@@ -1,7 +1,7 @@
 import { Button, Flex, Icon, Text, Link, LinkProps } from "@chakra-ui/react";
 import React from "react";
 import Image from "next/image";
-import { AiOutlineTwitter } from "react-icons/ai";
+import { AiOutlineTwitter, AiOutlineGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { theme } from "../../styles/theme";
@@ -31,8 +31,6 @@ const Footer = () => {
       textColor={theme.color.text.white}
       bgColor={theme.color.primary.blue}
       p={"4rem 0"}
-      pos={"relative"}
-      bottom={{ base: "0", "2xl": "-42rem" }}
     >
       <Image
         src={require("../../public/img/logo-2.webp")}
@@ -49,6 +47,14 @@ const Footer = () => {
           target="_blank"
         >
           <Icon as={FaLinkedinIn} />
+        </Link>
+
+        <Link
+          {...SocialIcon}
+          href={"https://github.com/hasekd"}
+          target="_blank"
+        >
+          <Icon as={AiOutlineGithub} />
         </Link>
 
         <Link {...SocialIcon} href={"https://twitter.com/"} target="_blank">

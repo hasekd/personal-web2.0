@@ -47,9 +47,11 @@ const MobileNavbar = () => {
       <Flex justify={"space-between"} align={"center"} p={"2rem"}>
         <Link href={"/"}>
           <Image
-            src={require("../../public/img/logo.png")}
+            src={"/img/logo.png"}
             alt={"main-logo"}
-            style={{ width: 70 }}
+            width={200}
+            height={0}
+            style={{ width: "7rem" }}
           />
         </Link>
         <Icon
