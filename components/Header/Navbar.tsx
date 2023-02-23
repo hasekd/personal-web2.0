@@ -1,7 +1,7 @@
-import { Container, Flex, Text, TextProps } from "@chakra-ui/react";
+import { Flex, Text, TextProps } from "@chakra-ui/react";
 import { theme } from "../../styles/theme";
 import Link from "next/link";
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import React, { useLayoutEffect, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import MobileNavbar from "./MobileNavbar";

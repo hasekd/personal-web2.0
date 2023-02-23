@@ -17,6 +17,8 @@ const ProjectCard = ({ text, link, image, objectFit }: any) => {
       textAlign={"center"}
       onMouseEnter={() => setAnimation(true)}
       onMouseLeave={() => setAnimation(false)}
+      _active={{ borderRadius: "1.5rem" }}
+      _hover={{ borderRadius: "1.5rem" }}
     >
       <Image
         src={image}
