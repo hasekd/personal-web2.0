@@ -3,7 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { theme } from "../../styles/theme";
 
-const ProjectCard = ({ text, link, image }: any) => {
+const ProjectCard = ({ text, link, image, objectFit }: any) => {
   const [animation, setAnimation] = useState(false);
 
   const [isTabletOrSmaller] = useMediaQuery("(max-width: 600px)");
@@ -21,12 +21,12 @@ const ProjectCard = ({ text, link, image }: any) => {
       <Image
         src={image}
         alt={text}
-        width={400}
+        width={1000}
         height={0}
         style={{
-          width: "43rem",
+          width: "46rem",
           height: `${isTabletOrSmaller ? "20rem" : "30rem"}`,
-          objectFit: "cover",
+          objectFit: objectFit,
         }}
       />
       <Flex

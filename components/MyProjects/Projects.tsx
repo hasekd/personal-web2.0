@@ -27,10 +27,11 @@ const Projects = () => {
           image={"/img/Archieshop.png"}
           text="Handmade dog beds with unique design"
           link="https://github.com/hasekd"
+          objectFit="cover"
         />
         <ProjectCard
-          image={"/img/coming-soon.jpeg"}
-          text="jsdfkjsdfkjshdfajsndkasdkaskdaksmdkasm"
+          image={"/img/optimareality-web.jpg"}
+          text="Real estate agency, that has been on the market for more than 25 years"
           link="https://github.com/hasekd"
         />
         <ProjectCard
